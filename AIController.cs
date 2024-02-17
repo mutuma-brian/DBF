@@ -21,13 +21,11 @@ public class AIController : MonoBehaviour
     private int WPindexPointer = 0;     // Index of the current waypoint.
     private Transform waypoint;          // Current waypoint.
 
-    // Start is called before the first frame update
     void Start()
     {
         functionState = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (functionState == 0)
@@ -68,7 +66,6 @@ public class AIController : MonoBehaviour
         }
     }
 
-    // OnTriggerEnter is called when the GameObject collides with a trigger collider.
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Waypoint")) // Assuming waypoints have the "Waypoint" tag.
